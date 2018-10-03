@@ -11,13 +11,23 @@
       <div class="inputs">
         <input placeholder="Something"></input>
       </div>
-      <br>
       <button class="addOption">Add</button>
     </div>
-    <br>
+    <div class="resultSection"></div>
     <button>Go</button>
-    <br>
-    <br>
     <img src="Svealund1.jpg" alt="Svealund" width="403" heiht="302"></img>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function() {
+      $('.resultSection').hide()
+
+      var add_option = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addOption').click(add_option)
+    })
+    </script>
   </body>
 </html>
